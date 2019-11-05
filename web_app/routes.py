@@ -1,4 +1,3 @@
-from os import path
 from flask import render_template, url_for, request, redirect
 from web_app import app
 

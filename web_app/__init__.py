@@ -1,4 +1,3 @@
-from werkzeug.utils import secure_filename
 from flask import Flask 
 
 app = Flask(__name__)
