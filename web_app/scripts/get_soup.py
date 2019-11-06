@@ -12,7 +12,9 @@ def make_soup_from_band_name(band_name):
 	soup = bs(HTML, 'html.parser')
 
 	if soup.title.contents[0][-14:].lower() == "page not found":
-		return "not_found"
+		#return "not_found"
+		print(f"{band_name} was not found.")
+		exit(0)
 
 	return soup
 

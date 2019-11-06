@@ -9,6 +9,7 @@ def show_graph(counted_words, results_num, band):
 	names = [counted_words[x][0] for x in range(results_num)]
 	values = [counted_words[x][1] for x in range(results_num)]
 
+	plt.style.use('seaborn-dark')
 	plt.figure(figsize=(9, 3))
 	plt.plot(values[0])
 	plt.bar(names, values)

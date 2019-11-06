@@ -4,7 +4,7 @@ from utils import timer
 import make_graph
 
 #band = input("Type a band name: ")
-soup = make_soup_from_band_name("gorgasm")
+soup = make_soup_from_band_name("behemoth")
 
 def get_albums(soup):
 
@@ -44,7 +44,7 @@ def return_word_count(album_lyrics):
 	ignore_list = ["the", "my", "to", "from", "this", "i", "you", "and", "for", "with", "your", "a", "an", "or", \
 	"out", "in", "as", "of", "on", "will", "into", "onto", "them", "off", "are", "is", "it", "every", "have", "no", "yes", "by", "it's", \
 	"their", "me", "now", "you'll", "i'll", "will", "but", "can", "we", "us", "our", "not", "could", "would", "am", "don't", "be", "has",\
-	"never", "ever", "sometimes", "like", "i'm", "-", "at", "own", "all", "so", "that"]
+	"never", "ever", "sometimes", "like", "i'm", "-", "at", "own", "all", "so", "that", "what"]
 
 	occurences_dict = dict()
 
@@ -67,5 +67,5 @@ album_lyrics = parse_albums(album_urls)
 counted_words = return_word_count(album_lyrics)
 print(counted_words)
 
-make_graph.show_graph(counted_words, 10, "gorgasm")
+make_graph.show_graph(counted_words, 10, "behemoth")
 
