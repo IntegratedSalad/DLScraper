@@ -1,10 +1,9 @@
-from get_soup import make_soup_from_band_name, make_soup_from_album_url
+from web_app.scripts.get_soup import make_soup_from_band_name, make_soup_from_album_url
 from time import sleep
-from utils import timer
-import make_graph
+from web_app.scripts import make_graph
 
 #band = input("Type a band name: ")
-soup = make_soup_from_band_name("behemoth")
+# soup = make_soup_from_band_name("behemoth")
 
 def get_albums(soup):
 
@@ -61,11 +60,9 @@ def return_word_count(album_lyrics):
 	sorted_list = sorted(occurences_dict.items(), key=lambda k: k[1])
 	return list(reversed(sorted_list))
 
-album_urls = get_albums(soup)
-album_lyrics = parse_albums(album_urls)
+# album_urls = get_albums(soup)
+# album_lyrics = parse_albums(album_urls)
 
-counted_words = return_word_count(album_lyrics)
-print(counted_words)
-
-make_graph.show_graph(counted_words, 10, "behemoth")
+# counted_words = return_word_count(album_lyrics)
+# make_graph.show_graph(counted_words, 10, "behemoth")
 

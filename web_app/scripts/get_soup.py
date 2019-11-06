@@ -14,7 +14,7 @@ def make_soup_from_band_name(band_name):
 	if soup.title.contents[0][-14:].lower() == "page not found":
 		#return "not_found"
 		print(f"{band_name} was not found.")
-		exit(0)
+		return 'invalid_band'
 
 	return soup
 

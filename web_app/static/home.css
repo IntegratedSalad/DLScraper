@@ -1,4 +1,63 @@
-h1
+
+#title
 {
-	color: yellow;
+	transform: translate(6%, 18%);
+	font-size: 140px;
+	text-shadow: 2px 2px 2px rgb(180, 0, 0)
 }
+
+#subtitle
+{
+	transform: translate(20%, 280%);
+	font-size: 30px;
+
+}
+
+.basetext
+{
+	color: rgb(153, 0, 0);
+	font-family: 'Augusta', bold;
+	position: absolute
+}
+
+#bandfield
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+  	margin-left: -120px;
+	display: inline-block;
+	align-content: center;
+}
+
+body
+{
+	background-color: rgb(50, 0, 0);
+	padding: 30px;
+}
+
+.redbox
+{
+	background-color: rgb(40, 0, 0);
+	color: rgb(200, 0, 0);
+}
+
+@keyframes rotate
+{
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+#pent
+{
+	width: 500px;
+	position: absolute;
+	height: auto;
+	animation-name: rotate;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	z-index: -1;
+}
+

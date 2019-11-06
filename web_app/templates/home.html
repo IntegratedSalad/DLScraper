@@ -4,11 +4,30 @@
 		<title>Scribe of The Rotten</title>
 
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+		<link href="https://fonts.googleapis.com/css?family=Autour+One&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
 
 	</head>
-<body>
+	<body>
 
-	<h1>CHUUUUJ :DDD</h1>
+		<header>
+			<h1 class="basetext" id="title">Scribe Of The Rotten</h1>
+			<h3 class="basetext" id="subtitle">His wisdom and spellbooks beholdeth</h3>
+		</header>
 
-</body>
+		<main>
+			<form method="POST" action="" id="bandfield">
+				<input class="redbox" type="text" name="band" autofocus="autofocus" placeholder="Enter a band's name.">
+				<input class="redbox" type="submit" name="submit" value="Query the scribe">
+
+			</form>
+
+		</main>
+
+		<div>
+			<img src="../static/pentagram.png" id="pent">
+
+		</div>
+
+	</body>
 </html>
