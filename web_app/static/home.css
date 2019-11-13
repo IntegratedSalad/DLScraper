@@ -1,4 +1,12 @@
 
+
+@font-face
+{
+	font-family: Augusta;
+	src: url("Augusta.ttf");
+}
+
+
 #title
 {
 	transform: translate(6%, 18%);
@@ -48,6 +56,7 @@ body
 	from {transform: rotate(0deg);}
 	to {transform: rotate(360deg);}
 }
+
 
 #pent
 {
