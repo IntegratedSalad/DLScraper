@@ -12,8 +12,6 @@ def make_soup_from_band_name(band_name):
 	soup = bs(HTML, 'html.parser')
 
 	if soup.title.contents[0][-14:].lower() == "page not found":
-		#return "not_found"
-		print(f"{band_name} was not found.")
 		return 'invalid_band'
 
 	return soup
@@ -21,9 +19,11 @@ def make_soup_from_band_name(band_name):
 def make_soup_from_album_url(album_url):
 
 	URL = f"http://www.darklyrics.com{album_url}"
-	HTML = requests.get(URL, headers=headers).content
-	soup = bs(HTML, 'html.parser')
+	HTML = None
 
-	# TODO: EXCEPTIONS
+	try:
+		HTML = requests.get(URL, headers=headers).content
+	except requests.exceptions.ConnectionError as e:
+		return None
 
-	return soup
+	return bs(HTML, 'html.parser')

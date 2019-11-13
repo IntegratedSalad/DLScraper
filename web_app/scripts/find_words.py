@@ -2,9 +2,6 @@ from web_app.scripts.get_soup import make_soup_from_band_name, make_soup_from_al
 from time import sleep
 from web_app.scripts import make_graph
 
-#band = input("Type a band name: ")
-# soup = make_soup_from_band_name("behemoth")
-
 def get_albums(soup):
 
 	"""Gets album's urls."""
@@ -26,16 +23,25 @@ def parse_albums(albums_list):
 	lyrics = []
 
 	for album_url in albums_list:
+		if not "google" in album_url:
 
-		album_soup = make_soup_from_album_url(album_url)
+			album_soup = make_soup_from_album_url(album_url)
 
-		lyrics_ = album_soup.find_all("div", "lyrics")
-		for lyr in lyrics_:
-			to_remove = lyr.find_all(["h3", "br", "div", "a", "i"])
-			for element in to_remove:
-				element.decompose() # evil method
+			if album_soup is not None:
 
-			lyrics.append(str(lyr))
+				lyrics_ = album_soup.find_all("div", "lyrics")
+				for lyr in lyrics_:
+					to_remove = lyr.find_all(["h3", "br", "div", "a", "i"])
+					for element in to_remove:
+						element.decompose() # evil method
+
+					lyrics.append(str(lyr))
+			else:
+
+				raise TypeError("Album soup appears to be empty.")
+		else:		
+				
+			return "albums_not_found"
 
 	return lyrics
 
@@ -59,10 +65,3 @@ def return_word_count(album_lyrics):
 
 	sorted_list = sorted(occurences_dict.items(), key=lambda k: k[1])
 	return list(reversed(sorted_list))
-
-# album_urls = get_albums(soup)
-# album_lyrics = parse_albums(album_urls)
-
-# counted_words = return_word_count(album_lyrics)
-# make_graph.show_graph(counted_words, 10, "behemoth")
-

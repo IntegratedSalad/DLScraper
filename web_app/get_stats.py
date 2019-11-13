@@ -7,7 +7,9 @@ def return_stats(band_name):
 	else:
 		album_urls = find_words.get_albums(soup)
 		album_lyrics = find_words.parse_albums(album_urls)
-		counted_words = find_words.return_word_count(album_lyrics)
-		make_graph.save_graph(counted_words, band_name)
+		if album_lyrics is not "albums_not_found":
+			counted_words = find_words.return_word_count(album_lyrics)
+			make_graph.save_graph(counted_words, band_name)
+		else:
+			return album_lyrics # albums_not_found
 	
-	#make_graph.show_graph(counted_words, 10, "behemoth")
