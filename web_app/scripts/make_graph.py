@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 import os
 from web_app import OUTPUT_FOLDER
 
-def save_graph(counted_words, band, results_num=10, ):
+def save_graph(counted_words, band, results_num=10):
 	from matplotlib import pyplot as plt
 	names = [counted_words[x][0] for x in range(results_num)]
 	values = [counted_words[x][1] for x in range(results_num)]
