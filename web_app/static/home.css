@@ -4,13 +4,13 @@
 }
 
 #title {
-  transform: translate(6%, 18%);
+  transform: translate(55%, 18%);
   font-size: 140px;
   text-shadow: 2px 2px 2px rgb(180, 0, 0);
 }
 
 #subtitle {
-  transform: translate(20%, 280%);
+  transform: translate(62%, 280%);
   font-size: 30px;
 }
 
@@ -24,7 +24,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -30px;
+  margin-top: -10px;
   margin-left: -120px;
   display: inline-block;
   align-content: center;
@@ -33,6 +33,7 @@
 body {
   background-color: rgb(50, 0, 0);
   padding: 30px;
+  overflow: hidden;
 }
 
 .redbox {
@@ -72,7 +73,7 @@ body {
   position: absolute;
   background: red;
   animation-name: raining;
-  animation-duration: 1.2s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }

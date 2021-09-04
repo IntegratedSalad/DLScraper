@@ -33,7 +33,7 @@ def parse_albums(albums_list):
 				for lyr in lyrics_:
 					to_remove = lyr.find_all(["h3", "br", "div", "a", "i"])
 					for element in to_remove:
-						element.decompose() # evil method
+						element.decompose()
 
 					lyrics.append(str(lyr))
 			else:
@@ -55,6 +55,7 @@ def return_word_count(album_lyrics):
 
 	for lyric in album_lyrics:
 		words = lyric.split()
+		print(words)
 
 		for word in words:
 			if word.lower() not in ignore_list:

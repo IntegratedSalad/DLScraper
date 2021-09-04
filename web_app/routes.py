@@ -11,5 +11,11 @@ def home():
 		if get_stats.return_stats(band_name) == "albums_not_found":
 			# TODO make something
 			print("Albums not found")
+		else:
+			return redirect("result.html")
 
 	return render_template('home.html')
+
+@app.route("/result.html", methods=["GET", "POST"])
+def results():
+	return render_template("result.html")

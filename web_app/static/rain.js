@@ -16,7 +16,7 @@ const rain = setInterval(function() {
   newRaindrop.style.width = `${randWidth}px`;
 
   if (parseFloat(newRaindrop.style.width) < 1.5) {
-    newRaindrop.style.animationDuration = "1.5s";
+    newRaindrop.style.animationDuration = "2.0s";
   }
 
   document.querySelector(".background").appendChild(newRaindrop);
