@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>FUG</title>
-</head>
-<body>
+  <head>
+    <title>Dark Lyrics</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='result.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Autour+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='favicon.png') }}"
+    />
+  </head>
+  <body>
+    <div class="background">
+      <header>
+        <!-- <h1 class="basetext" id="title">Dark Lyrics</h1> -->
+
+        <a href="/" id="title" class="basetext" >Dark Lyrics</a>
+
+      </header>
 
 
-<h1> NOTHING THERE YET </h1>
-</body>
+      <div>
+      	
+      	<img src="{{url_for('static', filename='plot.png')}}" id="plot">
+
+      </div>
+
+	</div>
+  </body>
 </html>

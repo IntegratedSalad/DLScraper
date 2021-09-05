@@ -5,7 +5,7 @@ import font_download
 
 app = Flask(__name__)
 
-OUTPUT_FOLDER = os.path.join(app.instance_path, 'htmlfo')
+OUTPUT_FOLDER = os.path.join(os.path.dirname(os.path.realpath(__file__)), "static")
 
 PATH_TO_FILE = os.path.join(os.path.dirname(os.path.realpath(__file__)), "static", "Augusta.ttf")
 

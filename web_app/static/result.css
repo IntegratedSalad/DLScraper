@@ -1,0 +1,67 @@
+@keyframes slideup {
+
+	from {transform: translate(55%, 18%);}
+	to {transform: translate(55%, -0%);}
+}
+
+#title {
+
+	  font-size: 140px;
+  	text-shadow: 2px 2px 2px rgb(180, 0, 0);
+
+  	animation-name: slideup;
+  	animation-duration: 2s;
+  	transform: translate(55%, -0%);
+    text-decoration: none;
+}
+
+.basetext {
+  color: rgb(153, 0, 0);
+  font-family: "Augusta", bold;
+  position: absolute;
+}
+
+#bandfield {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -120px;
+  display: inline-block;
+  align-content: center;
+}
+
+body {
+  background-color: rgb(50, 0, 0);
+  padding: 30px;
+  overflow: hidden;
+}
+
+.redbox {
+  background-color: rgb(40, 0, 0);
+  color: rgb(200, 0, 0);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadein {
+
+	from { opacity: 0.0; }
+	to   { opacity: 1.0; }
+}
+
+#plot {
+
+	animation-name: fadein;
+	animation-duration: 3s;
+
+	transform: translate(42%, 75%)
+
+}
