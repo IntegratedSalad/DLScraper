@@ -30,6 +30,15 @@
   align-content: center;
 }
 
+#invalid_text {
+
+	color: rgb(200, 0, 0);
+	position: absolute;
+	top: 50%;
+	left: 42%;
+
+}
+
 body {
   background-color: rgb(50, 0, 0);
   padding: 30px;

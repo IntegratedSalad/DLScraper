@@ -16,11 +16,12 @@
       type="image/png"
       href="{{ url_for('static', filename='favicon.png') }}"
     />
+
+
   </head>
   <body>
     <div class="background">
       <header>
-        <!-- <h1 class="basetext" id="title">Dark Lyrics</h1> -->
 
         <a href="/" id="title" class="basetext" >Dark Lyrics</a>
 
@@ -28,11 +29,12 @@
 
 
       <div>
-      	
+      	<!-- <img src="{{url_for('static', filename='plot.png')}}" id="plot" onload="imageRefresh(this, 1000)"> -->
       	<img src="{{url_for('static', filename='plot.png')}}" id="plot">
 
       </div>
 
 	</div>
+
   </body>
 </html>

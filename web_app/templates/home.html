@@ -44,6 +44,12 @@
         </form>
       </main>
 
+      {% if invalid %}
+
+      <p id="invalid_text">Invalid band's name</p>
+
+      {% endif %}
+
 	</div>
 	<script type="text/javascript" src="{{ url_for('static', filename='rain.js') }}"></script>
   </body>
