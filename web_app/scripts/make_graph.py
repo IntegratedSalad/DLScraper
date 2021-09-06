@@ -15,4 +15,4 @@ def save_graph(counted_words, band, results_num=10):
 	plt.bar(names, values)
 	plt.suptitle(f"Words of {band.title()}")
 	# plt.show()
-	plt.savefig(os.path.join(OUTPUT_FOLDER, 'plot.png'), bbox_inches='tight')
+	plt.savefig(os.path.join(OUTPUT_FOLDER, f"{band}.png"), bbox_inches='tight')

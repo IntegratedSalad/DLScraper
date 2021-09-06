@@ -15,11 +15,12 @@ def home():
 		elif get_stats.return_stats(band_name) == "invalid_band":
 			invalid_band = True
 		else:
-			return redirect("result.html")
+			return redirect(url_for('.results', band_name=band_name))
 
 	return render_template('home.html', invalid=invalid_band)
 
 @app.route("/result.html", methods=["GET", "POST"])
 def results():
-	return render_template("result.html")
-	
+
+	band_name = request.args['band_name']
+	return render_template("result.html", band_name=band_name)
